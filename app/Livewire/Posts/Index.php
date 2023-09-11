@@ -10,6 +10,15 @@ class Index extends Component
 {
     use WithPagination;
 
+    public function destroy($id)
+    {
+        Post::destroy($id);
+
+        session()->flash('message','Data deleted successfully!');
+
+        return redirect()->route('posts.index');
+    }
+
     public function render()
     {
         return view('livewire.posts.index', [

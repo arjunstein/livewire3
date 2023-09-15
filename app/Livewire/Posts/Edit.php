@@ -6,6 +6,8 @@ use Livewire\Component;
 use App\Models\Post;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Rule;
+use Illuminate\Support\Facades\File;
+use Illuminate\Support\Facades\Storage;
 
 class Edit extends Component
 {
@@ -41,9 +43,15 @@ class Edit extends Component
 
         //check if image
         if ($this->image) {
-            # code...
+
             //store image in storage/app/public/posts
             $this->image->storeAs('public/posts', $this->image->hashName());
+
+            // Delete image in storage/app/public/posts
+            $path = storage_path('app/public/posts/'. $post->image);
+            if (File::exists($path)) {
+                File::delete($path);
+            }
 
             $post->update([
                 'image' => $this->image->hashName(),

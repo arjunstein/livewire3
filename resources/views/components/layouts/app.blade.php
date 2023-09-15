@@ -33,7 +33,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0" role="search">
-                        <a href="https://santrikoding.com" target="_blank" class="btn btn-success">SANTRIKODING.COM</a>
+                        <a href="https://arjunstein.github.io" target="_blank" class="btn btn-primary">Clickbait</a>
                     </ul>
                 </div>
             </div>

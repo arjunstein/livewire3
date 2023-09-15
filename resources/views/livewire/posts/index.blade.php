@@ -1,5 +1,5 @@
 @section('title')
-    Data Posts - Belajar Livewire 3 di SantriKoding.com
+    Data Posts - CRUD Laravel & Livewire 3
 @endsection
 
 <div class="container mt-5 mb-5">
